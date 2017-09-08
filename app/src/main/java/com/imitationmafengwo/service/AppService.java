@@ -6,7 +6,6 @@ import android.content.res.Resources;
 import android.util.DisplayMetrics;
 
 import com.imitationmafengwo.MyApplication;
-import com.imitationmafengwo.utils.log.L;
 
 import java.util.Locale;
 
@@ -58,7 +57,7 @@ public class AppService {
         if(istc == -1){
 //            String isTCStr = SettingService.shareInstance().getValue(isTCKey);
             String isTCStr = null;
-            L.e("--> isTCStr ="+isTCStr);
+//            L.e("--> isTCStr ="+isTCStr);
             if(isTCStr == null){
                 boolean tc = false;
                 String c= Locale.getDefault().getCountry();
@@ -67,7 +66,7 @@ public class AppService {
                         tc = true;
                     }
                 }
-                L.e("--> isTCStr = %s",String.valueOf(tc?1:0));
+//                L.e("--> isTCStr = %s",String.valueOf(tc?1:0));
 //                SettingService.shareInstance().saveString(isTCKey,tc?"1":"0");
                 istc = tc?1:0;
             }else{
@@ -81,7 +80,7 @@ public class AppService {
                 }
                 if(istc == -1){
 
-                    L.e("--> isTCStr == -1 set istc = %s",0);
+//                    L.e("--> isTCStr == -1 set istc = %s",0);
 //                    SettingService.shareInstance().saveString(isTCKey,"0");
                     istc = 0;
                 }
@@ -95,7 +94,7 @@ public class AppService {
     }
 
     public void switchTC(boolean tc, boolean rebuildUI){
-        L.e("--> tc = %s",tc);
+//        L.e("--> tc = %s",tc);
         int i = tc?1:0;
         if(istc == i){
             return;

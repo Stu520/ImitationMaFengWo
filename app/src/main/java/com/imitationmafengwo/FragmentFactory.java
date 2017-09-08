@@ -10,7 +10,6 @@ import com.imitationmafengwo.first.HomePageFragment;
 import com.imitationmafengwo.fourth.ShoppingMallFragment;
 import com.imitationmafengwo.second.DestinationFragment;
 import com.imitationmafengwo.third.HotelFragment;
-import com.imitationmafengwo.utils.log.L;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -48,10 +47,10 @@ public class FragmentFactory {
         BaseFragment fragment = null;
 
         if (useCache && (fragment = mFragmentCache.get(type)) != null) {
-            L.d("Hit the Fragment Cache, Fragment: %d, Type: %d", fragment.hashCode(), type);
+//            L.d("Hit the Fragment Cache, Fragment: %d, Type: %d", fragment.hashCode(), type);
             return fragment;
         }
-        L.d("FragmentFactory create fragment, type: " + type + " useCache: " + useCache);
+//        L.d("FragmentFactory create fragment, type: " + type + " useCache: " + useCache);
         switch (type) {
             case HomePageType.FRAGMENT_TYPE_HOMEPAGE:
                 fragment = new HomePageFragment();
@@ -76,7 +75,7 @@ public class FragmentFactory {
             fragment.setFragmentType(type);
 
             if (useCache) {
-                L.d("Set the Fragment Cache, Fragment: %d, Type: %d", fragment.hashCode(), type);
+//                L.d("Set the Fragment Cache, Fragment: %d, Type: %d", fragment.hashCode(), type);
                 mFragmentCache.put(type, fragment);
             }
         }

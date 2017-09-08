@@ -4,7 +4,6 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.imitationmafengwo.network.cookie.PersistentCookieJar;
-import com.imitationmafengwo.utils.log.L;
 
 import java.util.HashMap;
 import java.util.List;
@@ -105,7 +104,7 @@ public class ApiHelper {
     }
 
     public static HttpLoggingInterceptor.Logger httpLoggingInterceptorLogger = (message)->{
-        L.i(message);
+//        L.i(message);
 //        if(DebugService.shareInstance().isOn()){
 //            DebugService.shareInstance().log(message);
 //        }

@@ -43,7 +43,7 @@ public class BaseFragment extends SupportFragment implements BaseFragmentInterfa
     protected int mState = STATE_NONE;
 
     public static final String ARGS_URL = "url";
-    private int mFragmentType;
+    private @FragmentFactory.HomePageType int mFragmentType = FragmentFactory.HomePageType.FRAGMENT_TYPE_HOMEPAGE;
     private Bundle mArgs = new Bundle();
     protected View mRootView;
     protected boolean isFirstLoadData = true;

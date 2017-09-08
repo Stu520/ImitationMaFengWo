@@ -1,7 +1,6 @@
 package com.imitationmafengwo.message;
 
 
-import com.imitationmafengwo.utils.log.L;
 import com.imitationmafengwo.utils.log.LogModuleName;
 import com.imitationmafengwo.utils.system.TaskExecutor;
 
@@ -37,7 +36,7 @@ public class MessagePump extends Thread {
     }
 
     public void destroyMessagePump() {
-        L.d("%s start destroying MessagePump", LogModuleName.MESSAGEPUMP);
+//        L.d("%s start destroying MessagePump", LogModuleName.MESSAGEPUMP);
 
         // this message is used to destroy the message center,
         // we use the "Poison Pill Shutdown" approach, see: http://stackoverflow.com/a/812362/668963
@@ -48,7 +47,7 @@ public class MessagePump extends Thread {
     public void run() {
         Thread.currentThread().setPriority(MIN_PRIORITY);
         dispatchMessages();
-        L.d("%s destroyed MessagePump", LogModuleName.MESSAGEPUMP);
+//        L.d("%s destroyed MessagePump", LogModuleName.MESSAGEPUMP);
     }
 
     public synchronized void register(Message.Type msgType, MessageCallback callback) {
@@ -149,7 +148,7 @@ public class MessagePump extends Thread {
                                         callback.onReceiveMessage(message);
 
                                     } catch (Exception e) {
-                                        L.w(e);
+//                                        L.w(e);
                                     }
 
                                     // recycle the Message object
@@ -166,7 +165,7 @@ public class MessagePump extends Thread {
                 }
 
             } catch (Exception e) {
-                L.w(e);
+//                L.w(e);
             }
         }
     }

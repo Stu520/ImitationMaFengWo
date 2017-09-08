@@ -6,7 +6,6 @@ import android.content.Context;
 import android.widget.TextView;
 
 import com.imitationmafengwo.R;
-import com.imitationmafengwo.utils.log.L;
 
 /**
  * Created by Stu on 2017/9/8.
@@ -62,7 +61,7 @@ public class SpinningDialog extends Dialog {
                 show();
 
             } catch (Exception e) {
-                L.w(e);
+//                L.w(e);
             }
             return true;
         }
@@ -76,7 +75,7 @@ public class SpinningDialog extends Dialog {
                 dismiss();
 
             } catch (Exception e) {
-                L.w(e);
+//                L.w(e);
             }
 
             return true;

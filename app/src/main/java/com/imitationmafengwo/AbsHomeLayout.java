@@ -14,7 +14,7 @@ import com.imitationmafengwo.base.BaseFragmentActivity;
 
 public abstract class AbsHomeLayout extends LinearLayout {
 
-    private @FragmentFactory.HomePageType int mCurrentFragmentType = -1;
+    private @FragmentFactory.HomePageType int mCurrentFragmentType = FragmentFactory.HomePageType.FRAGMENT_TYPE_HOMEPAGE;
 
     public AbsHomeLayout(Context context) {
         super(context);
@@ -64,6 +64,7 @@ public abstract class AbsHomeLayout extends LinearLayout {
                 fT.show(fragment);
             }
         }
+
 
         mCurrentFragmentType = fragmentType;
         fT.commitAllowingStateLoss();

@@ -7,7 +7,6 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.imitationmafengwo.R;
-import com.imitationmafengwo.utils.log.L;
 
 import me.yokeyword.fragmentation.SupportActivity;
 
@@ -78,6 +77,6 @@ public class BaseActivity extends SupportActivity {
     @Override
     protected void onResume(){
         super.onResume();
-        L.e("--==>>[show]"+this);
+//        L.e("--==>>[show]"+this);
     }
 }

@@ -4,8 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.imitationmafengwo.utils.log.L;
-
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 
@@ -32,7 +30,7 @@ public class DialogFactory {
             if (mMessageBox != null) mMessageBox.dismissDialog();
             mMessageBox = null;
         }catch (Exception e){
-            L.e(Log.getStackTraceString(e));
+//            L.e(Log.getStackTraceString(e));
         }
     }
 

@@ -2,8 +2,6 @@ package com.imitationmafengwo.api;
 
 import android.util.Log;
 
-import com.imitationmafengwo.utils.log.L;
-
 import org.json.JSONObject;
 
 import io.reactivex.functions.Function;
@@ -19,7 +17,7 @@ public class HeadResultFunc implements Function<Result<Void>, ApiResult> {
     @Override
     public ApiResult apply(Result<Void> result) {
         if (result.isError()) {
-            L.d("=====> error: " + Log.getStackTraceString(result.error()));
+//            L.d("=====> error: " + Log.getStackTraceString(result.error()));
             return ApiResult.error(result.error());
         }
         ApiResult res = new ApiResult();
@@ -48,7 +46,7 @@ public class HeadResultFunc implements Function<Result<Void>, ApiResult> {
                 res.setMsg(null);
                 res.setData(null);
             } catch (Exception e) {
-                L.d("ResultFunc Exception: " + Log.getStackTraceString(e));
+//                L.d("ResultFunc Exception: " + Log.getStackTraceString(e));
             }
 
         } else {
@@ -73,10 +71,10 @@ public class HeadResultFunc implements Function<Result<Void>, ApiResult> {
 //                        AccountService.shareInstance().apiLostSessions(rawResponse);
                     }
                 } else {
-                    L.d("=====>  errorBody == null");
+//                    L.d("=====>  errorBody == null");
                 }
             } catch (Exception e) {
-                L.d("ResultFunc Exception: " + Log.getStackTraceString(e));
+//                L.d("ResultFunc Exception: " + Log.getStackTraceString(e));
                 if(response.code() == 500){
                     res.setHttpCode(500);
                     res.setErrorCode(500);

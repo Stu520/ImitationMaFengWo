@@ -14,7 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.imitationmafengwo.R;
-import com.imitationmafengwo.utils.log.L;
 
 
 /**
@@ -248,7 +247,7 @@ public class MessageBox extends Dialog {
                 // WindowManager$BadTokenException will be caught and the app would not display
                 // the 'Force Close' message
                 // see http://stackoverflow.com/a/9950503/668963
-                L.w(e);
+//                L.w(e);
             }
 
             return true;

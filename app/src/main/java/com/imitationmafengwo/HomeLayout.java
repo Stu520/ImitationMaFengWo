@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.imitationmafengwo.api.ApiResult;
 import com.imitationmafengwo.base.PageType;
-import com.imitationmafengwo.utils.log.L;
 
 import org.json.JSONObject;
 
@@ -39,7 +38,6 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
     public HomeLayout(Context context) {
         this(context, null);
         mContext = context;
-        init();
     }
 
     public HomeLayout(Context context, AttributeSet attrs) {
@@ -107,7 +105,9 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
         Observable.create(f -> {
             onTabSelected(mIndex);
 //            setTabSelected(mIndex);
-            f.onComplete();
+            if (f!=null){
+                f.onComplete();
+            }
         }).subscribeOn(AndroidSchedulers.mainThread()).
                 observeOn(AndroidSchedulers.mainThread()).subscribe(ff -> {
         }, e -> e.printStackTrace(), () -> {
@@ -119,7 +119,7 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
      */
     private void switchToPage(int pageType, Object obj) {
 
-        L.d("Main#******************************Main#MainActivity pageType =  " + pageType);
+//        L.d("Main#******************************Main#MainActivity pageType =  " + pageType);
         Bundle bundle = new Bundle();
         if (obj != null && obj instanceof String) {
             bundle.putString(ARGS_URL, (String) obj);
@@ -127,7 +127,7 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
         try {
             replaceFragment(pageType, bundle);
         } catch (IllegalStateException e) {
-            L.e("java.lang.IllegalStateException");
+//            L.e("java.lang.IllegalStateException");
         }
     }
 

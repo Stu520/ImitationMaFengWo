@@ -5,7 +5,6 @@ import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 
 import com.imitationmafengwo.MyApplication;
-import com.imitationmafengwo.utils.log.L;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -72,9 +71,9 @@ public class PersistentCookieJar implements CookieJar {
             SharedPreferences.Editor e = p.edit();
             e.remove("cookie");
             e.commit();
-            L.e("------->>> sf cookie: %s", this.preVersionCookie.toString());
+//            L.e("------->>> sf cookie: %s", this.preVersionCookie.toString());
         } else {
-            L.e("------->>> sf cookie: is null....");
+//            L.e("------->>> sf cookie: is null....");
         }
     }
 

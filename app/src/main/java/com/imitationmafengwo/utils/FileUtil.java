@@ -19,7 +19,6 @@ import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 
 import com.imitationmafengwo.MyApplication;
-import com.imitationmafengwo.utils.log.L;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -408,7 +407,7 @@ public class FileUtil {
             channel.close();
             write.close();
             //test
-            L.d("write::: content succ ", strFilePath);
+//            L.d("write::: content succ ", strFilePath);
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -460,7 +459,7 @@ public class FileUtil {
             channel.close();
             write.close();
             //test
-            L.d("write::: content succ ", strFilePath);
+//            L.d("write::: content succ ", strFilePath);
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -749,9 +748,9 @@ public class FileUtil {
                 if (out != null) out.close();
             }
         } catch (FileNotFoundException ex) {
-            L.e("File not found: " + ex);
+//            L.e("File not found: " + ex);
         } catch (IOException ex) {
-            L.e(ex);
+//            L.e(ex);
         }
 
     }
@@ -788,9 +787,9 @@ public class FileUtil {
                 if (out != null) out.close();
             }
         } catch (FileNotFoundException ex) {
-            L.e("File not found: " + ex);
+//            L.e("File not found: " + ex);
         } catch (IOException ex) {
-            L.e(ex);
+//            L.e(ex);
         }
     }
 
@@ -819,9 +818,9 @@ public class FileUtil {
                 if (fos != null) fos.close();
             }
         } catch (FileNotFoundException ex) {
-            L.e("File not found: " + ex);
+//            L.e("File not found: " + ex);
         } catch (IOException ex) {
-            L.e(ex);
+//            L.e(ex);
         }
     }
 
@@ -852,9 +851,9 @@ public class FileUtil {
                 if (fos != null) fos.close();
             }
         } catch (FileNotFoundException ex) {
-            L.e("File not found: " + ex);
+//            L.e("File not found: " + ex);
         } catch (IOException ex) {
-            L.e(ex);
+//            L.e(ex);
         }
     }
 
@@ -1414,7 +1413,7 @@ public class FileUtil {
 
 
     public static List<String> getExtSDCardPaths() {
-        L.i("go in getExtSDCardPaths");
+//        L.i("go in getExtSDCardPaths");
         List<String> paths = new ArrayList<>();
 
         String extFileStatus = Environment.getExternalStorageState();
@@ -1466,7 +1465,7 @@ public class FileUtil {
                 if (equalsToPrimarySD) {
                     continue;
                 }
-                L.i(line);
+//                L.i(line);
                 File mafengwo = new File(mountPath + File.separator + defineRootName + File.separator
                         + rootName + File.separator);
                 if (!mafengwo.exists()) {
@@ -1477,10 +1476,10 @@ public class FileUtil {
                 paths.add(mountPath);
             }
         } catch (IOException e) {
-            L.i(e.getLocalizedMessage());
-            e.printStackTrace();
+//            L.i(e.getLocalizedMessage());
+//            e.printStackTrace();
         }
-        L.i("go in getExtSDCardPaths end");
+//        L.i("go in getExtSDCardPaths end");
         return paths;
     }
 

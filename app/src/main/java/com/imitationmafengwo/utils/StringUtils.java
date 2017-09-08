@@ -4,8 +4,6 @@ import android.graphics.Paint;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.imitationmafengwo.utils.log.L;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,7 +72,7 @@ public class StringUtils {
                 v = f.format(date);
             }
         } catch (Exception e) {
-            L.e(Log.getStackTraceString(e));
+//            L.e(Log.getStackTraceString(e));
         }
         return v;
     }
