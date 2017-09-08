@@ -7,7 +7,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.text.TextUtils;
 
+import com.imitationmafengwo.message.Message;
+import com.imitationmafengwo.message.MessagePump;
+import com.imitationmafengwo.service.AppService;
+import com.imitationmafengwo.ui.AnimationsToastInfo;
+import com.imitationmafengwo.ui.CustomToast;
 import com.imitationmafengwo.utils.SharePrefConstant;
 import com.imitationmafengwo.utils.SharePreferenceWrapper;
 import com.imitationmafengwo.utils.StringUtils;
@@ -134,23 +140,17 @@ public class MyApplication extends Application {
 //		Config.DEBUG = true;
 //		Config.REDIRECT_URL = "http://sns.whalecloud.com";
         // image pluns init
-//		L.e("===>>> Fresco.initialize");
         initFresco();
         // greenDAO Database
-//		L.e("===>>> DBService.shareInstance");
 //        DBService.shareInstance();
-//		L.e("===>>> AccountService.shareInstance");
 //        AccountService.shareInstance();
 
 //	 	System.setProperty("http.keepAlive", "false");
 //        NetReceiver.ehList.add(this);  //屏蔽网络不通的主动监听
-//		L.e("===>>> TaskExecutor.init");
         //设置该CrashHandler为程序的默认处理器
-//		L.e("===>>> UnCeHandler");
 //        UnCeHandler catchExcep = new UnCeHandler(this);
 //        Thread.setDefaultUncaughtExceptionHandler(catchExcep);
 
-//		L.e("===>>> UIUtils.getDefaultDisplayMetrics");
 //        int with = UIUtils.getDefaultDisplayMetrics(getApplicationContext()).widthPixels;
 //        int height = UIUtils.getDefaultDisplayMetrics(getApplicationContext()).heightPixels;
 //        int realHeight = UIUtils.getRealDisplayMetrics(getApplicationContext()).heightPixels;
@@ -159,11 +159,8 @@ public class MyApplication extends Application {
 //        screenRealHeight = Math.max(with, realHeight);
 
 //        MobclickAgent.openActivityDurationTrack(false);
-//		L.e("===>>> AppService.init");
-//        AppService.init(this);
-//		L.e("===>>> AppService.shareInstance");
+        AppService.init(this);
 //        AppService.shareInstance().executeOnCreateApplication();
-//		L.e("===>>> executeOnCreateApplication");
 
         try{
 //            initUmPush();
@@ -193,8 +190,6 @@ public class MyApplication extends Application {
 
     public String deviceToken;
 
-    public static int screenWith = 0;
-    public static int screenHeight = 0;
 //    public static int screenRealHeight = 0;//真实的高度，包含了虚拟键的高度
 
 
@@ -284,8 +279,43 @@ public class MyApplication extends Application {
         }
     }
 
+    public static int screenWith = 0;
+    public static int screenHeight = 0;
+//    public static int screenRealHeight = 0;//真实的高度，包含了虚拟键的高度
 
+    public void showToastMessage(String title) {
+        if (TextUtils.isEmpty(title))
+            return;
+        showToastMessage(title, null, CustomToast.NO_ICON,
+                CustomToast.LENGTH_SHORT);
+    }
 
+    public void showToastMessage(int titleRes) {
+        showToastMessage(getString(titleRes), null, CustomToast.NO_ICON,
+                CustomToast.LENGTH_SHORT);
+    }
+
+    public void showToastMessage(String title, int iconDrawableId) {
+        showToastMessage(title, null, iconDrawableId, CustomToast.LENGTH_SHORT);
+    }
+
+    public void showToastMessage(String title, String content,
+                                 int iconDrawableId, int duration) {
+        AnimationsToastInfo info = new AnimationsToastInfo(title, content,
+                duration, iconDrawableId, 0);
+        // 如果非特殊情况，主线程初始化,Toast在MainActivity初始化
+        getMessagePump().broadcastMessage(Message.Type.SHOW_ANIMATIONS_TOAST,
+                info, Message.PRIORITY_NORMAL);
+
+    }
+    private MessagePump mMessagePump;
+
+    public MessagePump getMessagePump() {
+        if (mMessagePump == null) {
+            mMessagePump = new MessagePump();
+        }
+        return mMessagePump;
+    }
 
     @Override
     public void onTrimMemory(int level) {

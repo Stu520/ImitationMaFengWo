@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="250dip"
+              android:layout_height="140dip"
+              android:layout_centerInParent="true"
+              android:background="@drawable/system_msgbox_bg"
+              android:orientation="vertical"
+              android:padding="20dip"
+              android:layout_gravity="center">
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="0dip"
+                  android:layout_weight="1"
+                  android:layout_gravity="center">
+
+        <com.sfacg.ui.LoadingView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/loading_48"
+                android:contentDescription="@string/app_name"
+                />
+    </LinearLayout>
+    <com.sfacg.ui.SFTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip"
+            android:gravity="center"
+            style="@style/home_page_720p_text_style_t3_c1"
+            android:layout_gravity="center"/>
+</LinearLayout>

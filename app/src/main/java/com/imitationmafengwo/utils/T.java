@@ -18,16 +18,16 @@ import io.reactivex.schedulers.Schedulers;
 
 
 /**
- * Created by zhenian on 2016/11/16.
+ * Created by Stu on 2016/11/16.
  */
 
 public class T {
-    /**
-     * 本地化字符（根据简繁开关判断）
-     *
-     * @param string
-     * @return
-     */
+//    /**
+//     * 本地化字符（根据简繁开关判断）
+//     *
+//     * @param string
+//     * @return
+//     */
 //    public static String s(String string) {
 //        return AppService.localeString(string);
 //    }

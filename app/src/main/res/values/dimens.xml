@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_status_bar_height">24dp</dimen>
+    <dimen name="home_page_720p_text_size_4">14sp</dimen>
+    <dimen name="home_page_720p_text_size_3">16sp</dimen>
+    <dimen name="notice_bar_header_text_size">14dip</dimen>
+    <dimen name="notice_bar_content_text_size">12dip</dimen>
+
+    <dimen name="title_size">16dip</dimen>
+    <dimen name="content_size">14dip</dimen>
+    <dimen name="button_height">40dip</dimen>
+    <dimen name="button_text_size">16dip</dimen>
+
+</resources>

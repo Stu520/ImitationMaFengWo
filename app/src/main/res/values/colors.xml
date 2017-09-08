@@ -1,6 +1,333 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="bg_leftmenu">#ff7e8288</color>
+    <color name="leftmenu_cover">#d4e7e7e7</color>
+    <color name="frontbg_logout">#99565962</color>
+    <color name="blue">#ff2585e5</color>
+    <color name="blue_clicked">#ffd7d7d7</color>
+    <color name="light_gray">#ffaaaaaa</color>
+    <color name="theme_bg">#FFFCED</color>
+    <color name="app_list_item_color_pressed">#f5f5f5</color>
+    
+    <color name="white">#ffffffff</color>
+    <color name="white_normal">#eeffffff</color>
+    <color name="white_pressed">#ffffffff</color>
+    <color name="white_disabled">#66ffffff</color>
+    <color name="top_nav_bg">#D5ffffff</color>
+    <color name="font_clickable">#ff5477a7</color>
+    <color name="font_color_feed_time">#ffa6b1bf</color>
+    <color name="font_comment">#ff191919</color>
+    <item type="drawable" name="common_item_txt_p_bg">@color/common_item_p</item>
+    <color name="common_item_p">#ffe8e8e8</color>
+    
+    <color name="font_content">#ff081424</color>
+    <color name="font_gray">#ff858585</color>
+    <color name="font_label">#ff2c2c2c</color>
+    <color name="font_light_gray">#ffc0c0c0</color>
+    <color name="font_msg_list">#ffb5bbc0</color>
+    <color name="font_msg_uinfo">#ff686868</color>
+    <color name="bg_top_tab">#ff242424</color>
+    <color name="content_border">#fff8f9fc</color>
+    <color name="content_border_line">#ffb9c4d4</color>
+    <color name="colorAccent">#ffb9c4d4</color>
+    <color name="colorPrimary">#ffb9c4d4</color>
+    <color name="colorPrimaryDark">#ffb9c4d4</color>
+
+    <color name="dark_gray">#ff999999</color>
+    <color name="image_layout_rect_line">#cccccc</color>
+    <color name="dark_yellow">#ffb71c</color>
+    <color name="red_icon_color">#ffff5927</color>
+    <color name="light_gray2">#fff2f2f2</color>
+    <color name="light_gray3">#ffe2e2e2</color>
+    <color name="light_gray4">#ffcecece</color>
+    <color name="light_gray5">#ffb5b5b5</color>
+    <color name="light_gray7">#ffa6a6a6</color>
+    <color name="tabbar_btn_text_color">#66769a</color>
+    <drawable name="color_drwable_list_divider">@color/light_gray3</drawable>
+    <drawable name="color_drwable_list_item_pressed">#feee</drawable>
+    
+    <color name="home_page_bg">#eeeeee</color>
+    <color name="home_page_inner_panel">#eeeeee</color>
+
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="listview_item_color_drwable">@color/light_gray</drawable>
+    <drawable name="listview_item_color_drwable_pressed">@color/light_black</drawable>
+    
+    <color name="listview_item_bg_press">#19000000</color>
+
+    <color name="side_menu_bg_1">#303032</color>
+    <color name="side_menu_bg_2">#373739</color>
+    <color name="side_menu_bg_line">#2c2c2d</color>
+    <color name="side_bottom_bg_pressed">#323236</color>
+    <color name="side_bottom_bg">#3b3b3f</color>
+    <color name="side_bottom_bg_line">#121213</color>
+    <color name="side_menu_listview_item_text_color">#afafb3</color>
+    
+    <color name="md__defaultBackground">#FF555555</color>
+        <!--dropwater-->
+    <color name="drop_water_tip_color">#BCBCBC</color>
+    <color name="drop_water_drawcolor">#FFBD2A</color>
+    <color name="transparent">#65000000</color>
+    <color name="transparent_30">#77000000</color>
+    <color name="transparent_35">#90000000</color>
+    <color name="transparent_white_50">#7FFFFFFF</color>
+    <color name="transparent_70">#b2000000</color>
+    <color name="transparent_90_b1">#e61b1b1b</color>
+    <color name="transparent_00">#00000000</color>
+    <color name="dialog_page_background">#80000000</color>
+    <color name="half_white">#88f7f7f7</color>
+    <color name="black">#ff666666</color>
+    <color name="pure_black">#ff000000</color>
+    <color name="gray_blue">#ff23a3ff</color>
+    <color name="gray_light">#ff666666</color>
+    <color name="gray">#ffd6d6d6</color>
+    <color name="red">#ffee373f</color>
+    <color name="nocolor">#00000000</color>
+    <color name="hintcolor">#ffd0d0d0</color>
+    <color name="hintcolor1">#eed0d0d0</color>
+    <color name="login_bg">#fff3f3f3</color>
+    <color name="login_splite">#ffc3c3c3</color>
+    <color name="progress_green">#ff72c72c</color>
+    <color name="white_resume_bg">#ffffffff</color>
+    <color name="gray_title">#ff666666</color>
+    <color name="resume_f9f9f9">#fff9f9f9</color>
+    <color name="resume_e7e7e7">#ffe7e7e7</color>
+    <color name="resume_f8f8f8">#fff8f8f8</color>
+    <color name="resume_262626">#ff262626</color>
+    <color name="resume_6e6e6e">#ff6e6e6e</color>
+    <color name="resume_d9d9d9">#ffd9d9d9</color>
+    <color name="resume_white">#ffffffff</color>
+    <color name="chartline_2">#ffee373f</color>
+    <color name="chartline_1">#ff2585e5</color>
+    <color name="orange_help">#ffffa800</color>
+    <color name="diliverline_help">#ffcecece</color>
+    <color name="right_btn_text">#ffabacb1</color>
+    <color name="split_line">#ffe7e7e7</color>
+    <color name="choose_eara_item_press_color">#fff0f0f0</color>
+    <color name="blue_light">#ffddeefe</color>
+    
+    <color name="light_gray6">#ff959595</color>
+    <color name="top_nav_tips_num_color">#1fa1ff</color>
+    <color name="top_nav_indicator_color">#FA9912</color>
+   
+    <color name="bg_gray_color">#333333</color>
+    <color name="bg_gree_color">#004000</color>
+    <color name="bg_yellow_color">#393900</color>
+    <color name="bg_pink_color">#2F002F</color>
+    <color name="bg_orage_color">#371600</color>
+    <color name="bg_blue_color">#001F33</color>
+    <color name="bg_black_color">#cccccc</color>
+    
+    <color name="black_btn">#242424</color>
+    <color name="black_flip">#373737</color>
+    <color name="black_normal">#cc000000</color>
+    <color name="black_pressed">#ff000000</color>
+    <color name="black_disabled">#898989</color>
+    <color name="login_dialog_title_color">#ff8400</color>
+    <color name="bottom_text_shadow_color">#ffffff</color>
+    
+    <color name="bottom_text_color">#626262</color>
+    
+    <color name="message_title_text_color">#ffdd9951</color>
+    
+    <color name="orange_text">#ff8800</color>
+    <color name="light_black">#ff262626</color>
+    <color name="light_black2">#ff666666</color>
+    
+    <color name="home_page_720p_text_color_1">#ff333333</color>
+    <color name="home_page_720p_text_color_2">#ff666666</color>
+    <color name="home_page_720p_text_color_3">#ff898989</color>
+    <color name="home_page_720p_text_color_4">#ffb5b5b5</color>
+    <color name="home_page_720p_text_color_5">#ff999999</color>
+    
+    <color name="common_grey_bg">#eeeeee</color>
+    
+    <color name="background_transfer_dark">#66000000</color>
+    <color name="color_e43">#ffe43601</color>
+    <color name="color_e6">#ffe6e6e6</color>
+    <color name="color_e7">#ff31a6f8</color>
+    <color name="divider_line_color">#eeeeee</color>
+    <color name="guild_info_edit_text_hints_color">#898989</color>
+    <color name="upgrade_item_desc_bg">#FFE5E5E5</color>
+    
+    <color name="tab_orange">#FFFF6501</color>
+    <color name="tab_orange_act">#fec92f</color>
+    
+    <!--add in 2.5.0 homepage opt start-->
+    <color name="home_page_list_header_bg">#fff5f5f5</color>
+    <color name="home_page_list_header_text">#ff666666</color>
+    <color name="home_page_list_item_text">#ff313131</color>
+    <color name="upgrade_box_text_color">#ff656565</color>
+    <color name="upgrade_box_divider_background">#ffdadada</color>
+
+    
+    <color name="app_bg">#eeeeee</color>
+    <color name="tab_item_default">#fafafa</color>
+    <color name="tab_item_selected">#f0f1f2</color>
+    <color name="tab_text_selected">#f8597c</color>
+    <color name="tab_text_default">#bbbbbb</color>
+    <color name="background_color">#fbfbfb</color>
+    <color name="title_text_color">#ffffff</color>
+    <color name="app_bg_second">#B03118</color>
+    <!-- 透明色 -->
+    <color name="fuxk_settle_black_mark">#1A000000</color>
+    
+    <!-- 分割线 -->
+    <color name="fuxk_base_divide_line_color">#dcdcdc</color>
+    <color name="title_barbg">#ffef9965</color>
+    <color name="catory_color">#E1E1E1</color>
+    <color name="black_mark">#a0000000</color>
+    <color name="white_line">#cccccc</color>
+    <color name="pop_bg_color">#ff3d3d3d</color>
+    <color name="pop_bg_tou">#e63d3d3d</color>
+    
+    <color name="check_tip_color">#ffb37d</color>
+    <color name="pay_split">#d2d2d2</color>
+    <color name="pay_product_item_cost">#ff6600</color>
+    <color name="pay_order_info">#8c8c8c</color>
+    
+    <color name="book1_bg_color">#f0f0f0</color>
+    <color name="book2_bg_color">#d9ffd9</color>
+    <color name="book3_bg_color">#ffffce</color>
+    <color name="book4_bg_color">#ffeeff</color>
+    <color name="book5_bg_color">#ffe7d7</color>
+    <color name="book6_bg_color">#caeaff</color>
+    <color name="book7_bg_color">#202020</color>
+    <color name="night_bg_color">#393939</color>
+
+    <color name="alert_close_color">#e0e0e0</color>
+    <color name="alert_story_color">#ae5d5a</color>
+    <color name="alert_diver_color">#ebebeb</color>
+    <color name="open_image_color">#54b5f7</color>
+    
+    <color name="vip_bg_12">#00cc33</color>
+    <color name="vip_bg_35">#ff6600</color>
+    <color name="vip_bg_67">#3399ff</color>
+    <color name="vip_bg_89">#75a6bf</color>
+    <color name="vip_bg_1011">#fd9302</color>
+    <color name="vip_bg_max">#d50707</color>
+
+    <color name="navpage">#ffe1e8eb</color>
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ffef9965</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <color name="moon_icon_bookcolor">#ff6699ff</color>
+    <color name="moon_icon_dollar">#ff99cc00</color>
+    <color name="moon_icon_coins">#ffcc6699</color>
+    <color name="moon_icon_diamond">#ffff6600</color>
+    <color name="moon_icon_clock">#ffe5e57f</color>
+    <color name="moon_icon_download">#ffffcc00</color>
+    <color name="moon_icon_help">#ff339999</color>
+    <color name="moon_icon_setting">#ffb99572</color>
+    <color name="moon_icon_albums_menu">#ff999999</color>
+    <color name="tougao_bg">#fffffcf7</color>
+    <color name="pay_orage">#fe6e0e</color>
+    <color name="music_seekbar_bg">#ff000000</color>
+    <color name="music_seekbar_progress">#ffff9900</color>
+    <color name="music_seekbar_secprogress">#ffcccccc</color>
+    <color name="music_mulu_mask">#99000000</color>
+    <color name="black_mos">#ff000000</color>
+    <color name="lover_type">#fffe7207</color>
+    <color name="cmts_all">#ff9e9e9e</color>
+    <color name="story_to_login">#ff953941</color>
+    <color name="icon_text_selected">#ffff952d</color>
+    <color name="enable_layout">#ffaaaaaa</color>
+
+    <!--书评-->
+    <color name="user_font_icon">#ff1f1f1f</color>
+    <color name="createtime_font">#ff666666</color>
+    <color name="novel_detail_bg">#f6f6f6</color>
+    <color name="album_mulu">#ff7f00</color>
+    <color name="album_dowload_weight">#ff8930</color>
+    <color name="album_dowload_progress">#fc7d00</color>
+    <color name="alph_black">#b0000000</color>
+    <color name="storyed_icon">#fe7308</color>
+    <color name="commit_content">#AF5F5C</color>
+
+    <color name="index_album_more">#b2b2b2</color>
+    <color name="heart_normol">#ffc101</color>
+    <color name="heart_selected">#FFC101</color>
+    <color name="cricle_girl">#EAEAEA</color>
+    <color name="cmts_text_top">#c00b0b</color>
+    <color name="cmts_reply">#999999</color>
+    <color name="bookdetail_top_background">#676767</color>
+    <color name="bookdetail_fans_text">#ffaf35</color>
+    <color name="bookdetail_title">#e19a74</color>
+    <color name="bookdetail_messagebox_bg">#f7f7f7</color>
+    <color name="bookdetail_messagebox_shoucang_bg">#353535</color>
+    <color name="bookdetail_meesagebox_content_bg">#404040</color>
+    <color name="bookdetail_messagebox_edittex_bg">#5f5f5f</color>
+    <color name="bookdetail_fans_item">#9b9b9b</color>
+    <color name="bookdetail_noveltag">#e0e0e0</color>
+    <color name="mynovel_item_hot">#f99959</color>
+    <color name="mynovel_item_signstatus">#e6e58b</color>
+    <color name="mynovel_item_create">#b9b9b9</color>
+    <color name="mynovel_item_upload">#ffff99</color>
+    <color name="mynovel_type_seleted">#fd8609</color>
+    <color name="mynovel_edit_add">#eb834c</color>
+    <color name="across_right">#e0e0e0</color>
+    <color name="apply_feedback">#a70000</color>
+    <color name="alert_closed">#d8d8d8</color>
+    <color name="alert_catory_color">#d4d4d4</color>
+
+<!--书库，推荐-->
+    <color name="icon_color_lightnovel">#00CCFF</color>
+    <color name="icon_color_album">#99CC33</color>
+    <color name="icon_color_comic">#339999</color>
+    <color name="icon_color_paihang">#FF9900</color>
+    <color name="icon_color_riqing">#FF6666</color>
+    <color name="icon_color_fenlei">#CC66CC</color>
+
+    <color name="bg_gray_aphle_color">#C0000000</color>
+    <color name="page_index_aphle_color">#A0000000</color>
+
+    <color name="reader_menu_line_color">#525252</color>
+
+    <color name="comic_select_download_bg">#3399ff</color>
+    <color name="mymessage_item_username_font">#6F7179</color>
+    <color name="tag_alph_bg_color">#80f0f0f0</color>
+    <color name="dao_sanjiao_color">#e8e8e8</color>
+    <color name="tag_seleted_stroke">#ff9901</color>
+    <color name="tag_all_close">#e6e6e6</color>
+    <color name="tag_bg">#b0f0f0f0</color>
+    <color name="tag_round_line">#cbcbcb</color>
+    <color name="tag_fliter_seleted">#ff9900</color>
+    <color name="tag_txt_nomal">#666666</color>
+    <color name="phone_reg_error_tip">#e98352</color>
+    <color name="vip_num_orage">#ff9900</color>
+    <color name="vip_tip_gray">#999999</color>
+    <!--更新作者信息-->
+    <color name="updata_authort_into_hit_text">#D4D4D4</color>
+    <color name="updata_authort_into_tip_text">#8C8C8C</color>
+    <color name="ttr_draw_bg">#ffff99</color>
+    <!--新版vip详情-->
+    <color name="circle_back">#494947</color>
+    <color name="comic_icon_circle_bg">#FDB802</color>
+    <color name="novel_info_text_color">#FBFBFB</color>
+    <color name="novel_album_gray_color">#CCCCCC</color>
+    <color name="novel_album_noraml_color">#A2A2A2</color>
+    <color name="novel_type_bg">#77eeeeee</color>
+
+    <!--第三方登录-->
+    <color name="umeng_socialize_grid_divider_line">#F8F8F8</color>
+    <color name="umeng_socialize_color_group">#2c3035</color>
+    
+    <color name="voucher_validity">#FD9825</color>
+    <color name="voucher_record">#8A8A8A</color>
+
+    <color name="alert_title">#323232</color>
+    <color name="vip_txt_color">#ff3300</color>
+    <color name="album_order_bg">#f7f7f7</color>
+    <color name="has_reply">#ff0000</color>
+
+    <!--消息-->
+    <color name="message_zan">#1EC7FF</color>
+    <color name="message_message">#99CC00</color>
+    <color name="message_ad">#3399FF</color>
+    <color name="message_reply_item">#F9F9F9</color>
+
+
 </resources>

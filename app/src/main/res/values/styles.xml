@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="home_page_720p_text_style_t4_c2">
+        <item name="android:textSize">@dimen/home_page_720p_text_size_4</item>
+        <item name="android:textColor">@color/home_page_720p_text_color_2</item>
+    </style>
+    <style name="home_page_720p_text_style_t3_c1">
+        <item name="android:textSize">@dimen/home_page_720p_text_size_3</item>
+        <item name="android:textColor">@color/home_page_720p_text_color_1</item>
+    </style>
 </resources>

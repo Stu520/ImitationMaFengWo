@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/toast_bg_black"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="20dip" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/toast_icon_speed"
+            android:contentDescription="@string/app_name"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <com.sfacg.ui.SFTextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="愤怒的小鸟"
+            android:textColor="@color/white"
+            android:textSize="@dimen/notice_bar_header_text_size" />
+
+        <com.sfacg.ui.SFTextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="愤怒的小鸟"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/notice_bar_content_text_size" />
+    </LinearLayout>
+
+</LinearLayout>
