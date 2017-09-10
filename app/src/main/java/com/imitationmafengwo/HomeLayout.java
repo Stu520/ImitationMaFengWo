@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.imitationmafengwo.api.ApiResult;
 import com.imitationmafengwo.base.PageType;
+import com.imitationmafengwo.databinding.ActivityMainBinding;
 
 import org.json.JSONObject;
 
@@ -34,10 +36,27 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
 
     private Context mContext = null;
     public TextView tvHasNewMessage;//“我的” 红点
+    private View rootView;
+
+    ActivityMainBinding binding;
 
     public HomeLayout(Context context) {
         this(context, null);
         mContext = context;
+    }
+
+    public void setBinding( ActivityMainBinding binding){
+        this.binding = binding;
+        this.binding.mainTabContainer1.setOnClickListener(this);
+        this.binding.mainTabContainer2.setOnClickListener(this);
+        this.binding.mainTabContainer3.setOnClickListener(this);
+        this.binding.mainTabContainer4.setOnClickListener(this);
+        this.binding.mainTabContainer5.setOnClickListener(this);
+    }
+
+    @Override
+    public View getRootView() {
+        return rootView;
     }
 
     public HomeLayout(Context context, AttributeSet attrs) {
@@ -52,7 +71,6 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
     }
 
     private void init() {
-
         int openTab = 0;
         if (openTab == 0) {
             mIndex = PageType.HOMEPAGE_FRAGMENT_INDEX;
@@ -69,22 +87,6 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
         if (openTab == 4) {
             mIndex = PageType.SETTING_FRAGMENT_INDEX;
         }
-
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        inflater.inflate(R.layout.activity_main, this);
-
-        mainTabLayout = (RelativeLayout) findViewById(R.id.main_tab_layout);
-        tabContainer1 = (RelativeLayout) findViewById(R.id.main_tab_container1);
-        tabContainer2 = (RelativeLayout) findViewById(R.id.main_tab_container2);
-        tabContainer3 = (RelativeLayout) findViewById(R.id.main_tab_container3);
-        tabContainer4 = (RelativeLayout) findViewById(R.id.main_tab_container4);
-        tabContainer5 = (RelativeLayout) findViewById(R.id.main_tab_container5);
-        tvHasNewMessage = (TextView) findViewById(R.id.tvHasNewMessage);
-        tabContainer1.setOnClickListener(this);
-        tabContainer2.setOnClickListener(this);
-        tabContainer3.setOnClickListener(this);
-        tabContainer4.setOnClickListener(this);
-        tabContainer5.setOnClickListener(this);
 
         initBottomRadioGroup();
     }
@@ -158,18 +160,23 @@ public class HomeLayout extends AbsHomeLayout implements View.OnClickListener {
         switch (pageType) {
             case PageType.HOMEPAGE_FRAGMENT_INDEX:
                 switchToPage(FragmentFactory.HomePageType.FRAGMENT_TYPE_HOMEPAGE, null);
+                Toast.makeText(getContext(),"点击了首页",Toast.LENGTH_SHORT).show();
                 break;
             case PageType.DESTINATION_FRAGMENT_INDEX:
                 switchToPage(FragmentFactory.HomePageType.FRAGMENT_TYPE_DESTINATION, null);
+                Toast.makeText(getContext(),"点击了目的地",Toast.LENGTH_SHORT).show();
                 break;
             case PageType.HOTEL_FRAGMENT_INDEX:
                 switchToPage(FragmentFactory.HomePageType.FRAGMENT_TYPE_HOTEL, null);
+                Toast.makeText(getContext(),"点击了酒店",Toast.LENGTH_SHORT).show();
                 break;
             case PageType.SHOPPING_MALL_FRAGMENT_INDEX:
                 switchToPage(FragmentFactory.HomePageType.FRAGMENT_TYPE_SHOPPINGMALL, null);
+                Toast.makeText(getContext(),"点击了商城",Toast.LENGTH_SHORT).show();
                 break;
             case PageType.SETTING_FRAGMENT_INDEX:
                 switchToPage(FragmentFactory.HomePageType.FRAGMENT_TYPE_MINE, null);
+                Toast.makeText(getContext(),"点击了我的",Toast.LENGTH_SHORT).show();
                 break;
 
             default:

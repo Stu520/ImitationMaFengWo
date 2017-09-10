@@ -1,160 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context="com.imitationmafengwo.MainActivity">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.imitationmafengwo.HomePageViewModel"/>
+    </data>
+
     <FrameLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </FrameLayout>
-    <View
-        android:id="@+id/mystatebar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/top_status_bar_height"
-        android:layout_alignParentTop="true"
-        android:background="@color/title_barbg"
-        android:visibility="gone"
-        />
 
-    <RelativeLayout
-        android:id="@+id/main_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="55dip"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
-
-        <RelativeLayout
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <View
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="44dp"
+        </FrameLayout>
+
+        <View
+            android:id="@+id/mystatebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_status_bar_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_barbg"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/main_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dip"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="@color/catory_color" />
+                android:layout_height="match_parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="44dp"
+                    android:background="@color/catory_color" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/main_tab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/main_tab_container1"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/main_tab_image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{viewModel.firstTitle}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_tab_container2"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/main_tab_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{viewModel.secondTitle}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_tab_container3"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="@{viewModel.puctionBack?View.GONE:View.VISIBLE}"
+                    >
+
+                    <TextView
+                        android:id="@+id/main_tab_image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{viewModel.thirdTitle}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_tab_container4"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="@{viewModel.puctionBack?View.GONE:View.VISIBLE}"
+                    >
+
+                    <TextView
+                        android:id="@+id/main_tab_image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{viewModel.fourthTitle}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_tab_container5"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="@{viewModel.puctionBack?View.GONE:View.VISIBLE}"
+                    >
+
+                    <TextView
+                        android:id="@+id/main_tab_image5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@{viewModel.fifthTitle}" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/main_tab_image5"
+                        android:layout_alignLeft="@+id/main_tab_image5"
+                        android:layout_alignRight="@+id/main_tab_image5"
+                        android:layout_alignTop="@+id/main_tab_image5">
+
+                        <TextView
+                            android:id="@+id/tvHasNewMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:text="●"
+                            android:textColor="@color/has_reply"
+                            android:textSize="8dp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
 
-
-        <LinearLayout
-            android:id="@+id/main_tab"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:id="@+id/main_tab_container1"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="11dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/main_tab_image1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="首页"
-                    />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/main_tab_container2"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="11dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/main_tab_image2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="目的地" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/main_tab_container3"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="11dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/main_tab_image3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="酒店" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/main_tab_container4"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="11dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/main_tab_image4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="旅行商城"/>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/main_tab_container5"
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_marginTop="11dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/main_tab_image5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="我的" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/main_tab_image5"
-                    android:layout_alignRight="@+id/main_tab_image5"
-                    android:layout_alignBottom="@+id/main_tab_image5"
-                    android:layout_alignTop="@+id/main_tab_image5"
-                    >
-                    <TextView
-                        android:id="@+id/tvHasNewMessage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginTop="2dp"
-                        android:text="●"
-                        android:textColor="@color/has_reply"
-                        android:textSize="8dp"
-                        android:visibility="gone"/>
-                </RelativeLayout>
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-</FrameLayout>
+    </FrameLayout>
+</layout>
