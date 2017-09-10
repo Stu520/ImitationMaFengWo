@@ -18,25 +18,40 @@
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="314dp"
+            android:layout_height="74dp"
             app:layout_behavior="com.imitationmafengwo.behavior.FlingBehavior"
             >
+            <View
+                android:id="@+id/mystatebar"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@color/title_barbg"
+                />
             <android.support.design.widget.CollapsingToolbarLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:contentScrim="@color/red_icon_color"
-                android:minHeight="89dp"
+                android:minHeight="50dp"
                 app:expandedTitleMarginEnd="1dp"
                 app:expandedTitleMarginStart="1dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
                 >
-
+                    <EditText
+                        android:id="@+id/search_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:hint="请输入要搜索的内容"
+                        />
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
 
         </android.support.v7.widget.RecyclerView>
 
