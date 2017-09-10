@@ -35,7 +35,7 @@ public class MainActivity extends BaseFragmentActivity implements
         mHomeLayout = new HomeLayout(this);
         viewModel = new HomePageViewModel();
         binding.setViewModel(viewModel);
-        viewModel.setPuctionBack(false);
+        viewModel.setPuctionBack(true);
         mainActivity = this;
         viewModel.loadSignal().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(f->{
