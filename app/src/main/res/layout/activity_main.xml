@@ -98,7 +98,6 @@
                     android:layout_marginTop="11dp"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:visibility="@{viewModel.puctionBack?View.GONE:View.VISIBLE}"
                     >
 
                     <TextView
