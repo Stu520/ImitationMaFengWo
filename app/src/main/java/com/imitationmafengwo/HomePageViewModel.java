@@ -25,7 +25,7 @@ public class HomePageViewModel extends BaseViewModel {
         puctionBack.set(isPuctionBack);
         if (isPuctionBack){
             secondTitle.set("添加");
-            thirdTitle.set("修改");
+            thirdTitle.set("搜索");
         }else {
             secondTitle.set("目的地");
             thirdTitle.set("酒店");

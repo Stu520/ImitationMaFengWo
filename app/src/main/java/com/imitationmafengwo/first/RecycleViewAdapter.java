@@ -21,7 +21,6 @@ import java.util.List;
 
 public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ItemViewHolder> {
 
-//    public  List<FristItemViewModel> list = new ArrayList<>();
     public final ObservableList<FristItemViewModel> list = new ObservableArrayList<>();
     private Context context;
 
@@ -31,6 +30,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     public void setList(ObservableList<FristItemViewModel> list){
         this.list.addAll(list);
+        notifyDataSetChanged();
     }
 
     public void setList(FristItemViewModel itemViewModel){

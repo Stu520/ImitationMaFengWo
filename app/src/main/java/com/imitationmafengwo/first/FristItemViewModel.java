@@ -39,4 +39,8 @@ public class FristItemViewModel extends BaseViewModel {
             v.getContext().startActivity(intent);
         }
     };
+
+    public Description getDescriptions() {
+        return descriptions;
+    }
 }
